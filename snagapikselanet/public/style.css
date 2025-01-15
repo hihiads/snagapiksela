@@ -1,0 +1,152 @@
+/* Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  height: 100%; /* Osiguravamo da HTML i BODY zauzimaju cijelu visinu */
+}
+
+/* Postavljamo body kao flexbox kontejner */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Omogućava da stranica zauzima cijelu visinu prozora */
+}
+
+/* Preloader Styling */
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  font-size: 4rem;
+  font-weight: bold;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.fade-letter {
+  opacity: 0;
+  transform: scale(0.5);
+  animation: none;
+}
+
+#letter-s {
+  animation: fadeInScale 2s forwards;
+}
+
+#letter-p {
+  animation: fadeInScale 2s 2s forwards; /* Starts 2 seconds after S */
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Header Styling */
+header {
+  background-color: #1a1a1a; /* Tamna boja za header */
+  color: #ffffff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-and-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+/* Main Styling */
+main {
+  flex: 1; /* Ovaj flex omogući da main popuni sav raspoloživi prostor */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+main h2 {
+  margin: 10px 0;
+  font-size: 2rem;
+  color: #333;
+}
+
+main p {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #2a2a2a; /* Tamnija boja za footer */
+  color: #ffffff;
+  text-align: left;
+  padding: 20px;
+  width: 100%;
+  margin-top: auto; /* Postavlja footer na dno stranice */
+}
+
+footer p {
+  margin: 5px 0;
+}
+img {
+  max-width: 50%;
+  height: auto;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00bcd4; /* Svijetla plava boja na hover */
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+
+    text-decoration: none;
+  
+}
