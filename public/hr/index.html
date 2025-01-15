@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnagaPiksela | Početna</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="snagapiksela.png">
+  <script src="skripta.js"></script>
+</head>
+<body>
+  <!-- Zaslon za učitavanje -->
+  <div class="zaslon-za-ucitavanje" id="zaslon-za-ucitavanje">
+    <h1>Dobrodošli u SnagaPiksela</h1>
+  </div>
+
+  <header class="glavni-header">
+    <img src="snagapiksela.png" alt="SnagaPiksela Logo">
+    <h1>Razvojni tim SnagaPiksela</h1>
+  </header>
+
+  <nav>
+    <ul class="navigacijski-linkovi">
+      <li><a href="/">English</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>O SnagaPiksela</h2>
+    <p>SnagaPiksela je razvojni tim koji trenutno traži članove vješte u JavaScriptu, HTML-u, CSS-u i drugim tehnologijama. Tim vodi Din Mulajusufović. Ako ste zainteresirani za pridruživanje, kontaktirajte nas na <a href="mailto:info@snagapiksela.net">info@snagapiksela.net</a>.</p>
+
+    <h2>Vještine</h2>
+    <p>Specijalizirani smo za web razvoj, koristeći JavaScript, HTML i CSS za kreiranje modernih, učinkovitih web stranica.</p>
+
+    <h2>Kontaktirajte nas</h2>
+    <p>Ako ste zainteresirani za web stranicu ili želite surađivati, slobodno nas <a href="mailto:info@snagapiksela.net">kontaktirajte</a>.</p>
+  </main>
+
+  <footer>
+    <p>SnagaPiksela &copy; 2024</p>
+    <p><a href="mailto:info@snagapiksela.net">info@snagapiksela.net</a> | +385 91 617 2445</p>
+  </footer>
+
+  <script>
+    window.addEventListener('load', function() {
+      const zaslonZaUcitavanje = document.getElementById('zaslon-za-ucitavanje');
+      setTimeout(function() {
+        zaslonZaUcitavanje.style.opacity = '0';
+        setTimeout(function() {
+          zaslonZaUcitavanje.style.display = 'none';
+        }, 1000);
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
+

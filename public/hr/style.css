@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+h1, h2 {
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Zaslon za učitavanje */
+.zaslon-za-ucitavanje {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  transition: opacity 1s ease;
+  z-index: 9999;
+}
+
+/* Header sa slikom */
+.glavni-header {
+  text-align: center;
+  padding: 20px;
+  background-color: black;
+}
+
+.glavni-header img {
+  max-width: 400px; /* Povećana veličina slike */
+  height: auto;
+}
+
+.glavni-header h1 {
+  font-size: 3em;
+  color: yellow; /* Promjena boje u žutu */
+}
+
+/* Navigacijski izbornik */
+.navigacijski-linkovi {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.navigacijski-linkovi li {
+  margin: 0 15px;
+  font-size: 1.5em;
+  position: relative;
+}
+
+.navigacijski-linkovi a {
+  color: red;
+  transition: color 0.3s ease;
+}
+
+/* Animacija prilikom hoveranja */
+.navigacijski-linkovi li:hover a {
+  color: red;
+}
+
+.navigacijski-linkovi li::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+.navigacijski-linkovi li:hover::before {
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  text-align: left;
+  padding: 10px;
+  background-color: black;
+  color: red;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: red;
+}
