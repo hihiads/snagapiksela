@@ -1,49 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SnagaPiksela | Home</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="smagapikselanet.jpg">
+  <title>SnagaPiksela - Portfolio Din Mulajusufović</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    main {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    .preloader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000;
+      color: #fff;
+      font-size: 4rem;
+      font-weight: bold;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+    .fade-letter {
+      opacity: 0;
+      transform: scale(0.5);
+      animation: none;
+    }
+    #letter-s {
+      animation: fadeInScale 2s forwards;
+    }
+    #letter-p {
+      animation: fadeInScale 2s 2s forwards;
+    }
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.querySelector('.preloader').style.display = 'none';
+      }, 4500);
+    });
+  </script>
 </head>
 <body>
-  <!-- Preloader -->
+
   <div class="preloader">
-    <span class="fade-letter" id="letter-s">S</span>
-    <span class="fade-letter" id="letter-p">P</span>
+    <span id="letter-s" class="fade-letter">S</span>
+    <span style="width: 20px;"></span>
+    <span id="letter-p" class="fade-letter">P</span>
   </div>
 
-  <!-- Main Content -->
-  <div class="content">
-    <header>
-      <div class="logo-and-title">
-        <img src="snagapikselanet.png" alt="SnagaPiksela Logo" class="logo">
-        <h1>SnagaPiksela</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+  <header>
+    <h1>SnagaPiksela</h1>
+  </header>
 
-    <main>
-      <h2>Welcome to SnagaPiksela</h2>
-      <p>Explore our web development projects and join our growing team!</p>
-      <h2>Our ex-client SD Studio's website</h2>
-      <img src="mainpage.png" alt="Failed to load.">
-      <img src="sdbotpage.png" alt="Failed to load.">
-      <img src="servicespage.png" alt="Failed to load.">
-    </main>
+  <main>
+    <h2>O meni</h2>
+    <p>Zovem se Din Mulajusufović, imam 15 godina i pohađam Tehničku školu za računalstvo i mrežne djelatnosti za smjer Tehničar za računalstvo. Programiranjem sam se počeo baviti iz znatiželje, a sada mi je to velika strast.</p>
 
-    <footer>
-      <p>SnagaPiksela &copy; 2025. All rights reserved.</p>
-      <p><a href="mailto:info@snagapiksela.net">info@snagapiksela.net</a> | +385 91 617 2445</p>
-    </footer>
-  </div>
+    <p>Iako sam početnik, već imam solidno iskustvo u razvoju web stranica koristeći HTML, CSS i JavaScript. Uživam učiti nove tehnologije i stalno radim na usavršavanju svojih vještina. Moj cilj je postati profesionalni web developer i stvarati moderne, responzivne i funkcionalne web aplikacije.</p>
 
-  <script src="script.js"></script>
+    <h2>Vještine</h2>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript (osnovni projekti, DOM manipulacija, animacije)</li>
+    </ul>
+
+    <h2>Karakteristike</h2>
+    <p>Odgovoran sam, organiziran i znatiželjan. Volim rješavati probleme, učiti nove stvari i raditi na projektima koji imaju stvarnu svrhu. Uvijek tražim prilike za suradnju i nove izazove.</p>
+  </main>
+
+  <footer>
+    <p>SnagaPiksela.net | info@snagapiksela.net | +385 91 617 2445</p>
+  </footer>
+
 </body>
 </html>
