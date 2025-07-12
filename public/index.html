@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SnagaPiksela</title>
+  <title>SnagaPiksela - Portfolio Din Mulajusufović</title>
   <style>
     * {
       box-sizing: border-box;
@@ -12,8 +12,8 @@
       margin: 0;
       padding: 0;
       min-height: 100%;
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e3f2fd, #fce4ec);
       color: #333;
       display: flex;
       flex-direction: column;
@@ -22,10 +22,12 @@
       background-color: #222;
       color: #fff;
       padding: 20px;
+      text-align: center;
     }
     header h1 {
       margin: 0;
-      font-size: 1.8rem;
+      font-size: 2.2rem;
+      transition: all 0.5s ease-in-out;
     }
     main {
       padding: 40px 20px;
@@ -34,7 +36,7 @@
       flex: 1;
     }
     main h2 {
-      color: #444;
+      color: #4a148c;
       margin-top: 40px;
     }
     ul {
@@ -45,6 +47,10 @@
     }
     .section {
       margin-bottom: 40px;
+      background-color: #ffffffcc;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     footer {
       background-color: #222;
@@ -93,6 +99,34 @@
       setTimeout(() => {
         document.querySelector('.preloader').style.display = 'none';
       }, 4500);
+    });
+
+    const steps = [
+      "SnagaPiksela",
+      "SnagPiksel",
+      "SnaPikse",
+      "SnPiks",
+      "SPik",
+      "SPi",
+      "SP",
+      "SPi",
+      "SPik",
+      "SnPiks",
+      "SnaPikse",
+      "SnagPiksel",
+      "SnagaPiksela"
+    ];
+
+    window.addEventListener('scroll', () => {
+      const headerTitle = document.querySelector('header h1');
+      if (window.scrollY === 0) {
+        let i = 0;
+        const interval = setInterval(() => {
+          headerTitle.textContent = steps[i];
+          i++;
+          if (i === steps.length) clearInterval(interval);
+        }, 150);
+      }
     });
   </script>
 </head>
